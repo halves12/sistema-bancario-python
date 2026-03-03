@@ -24,3 +24,8 @@ O objetivo foi criar um sistema interativo que permitisse a um usuário realizar
 3. Execute o comando:
    ```bash
    python sistema_bancario.py
+
+   ## 🆕 Novidades desta Versão
+- **Confirmação de Transação:** Implementada uma camada de segurança que pergunta ao usuário se ele deseja confirmar o depósito ou saque (`s/n`), evitando erros acidentais.
+- **Melhoria Visual:** Menu formatado com tabulações (`\t`) para melhor alinhamento no terminal.
+- **Correção de Fluxo:** Ajuste na lógica de exibição do extrato para garantir a leitura antes de retornar ao menu.
