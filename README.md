@@ -1,31 +1,38 @@
-# Sistema Bancário em Python 🏦
+🏦 Sistema Bancário Otimizado com Python
+Este projeto é um simulador de operações bancárias desenvolvido como o segundo desafio do Bootcamp Engenharia de Dados com Python da  em parceria com a NTT DATA.
 
-Este projeto é um simulador de operações bancárias desenvolvido como o primeiro desafio do **Bootcamp Engenharia de Dados com Python** da [DIO](https://www.dio.me/) em parceria com a **NTT DATA**.
+📝 Descrição do Projeto
+Este projeto consiste em um sistema bancário modularizado desenvolvido em Python, focado na aplicação de regras de negócio para gestão de contas e usuários. O sistema foi estruturado para simular o fluxo de um ERP financeiro, garantindo a integridade dos dados e a rastreabilidade das operações.
 
-## 💻 Sobre o Desafio
-O objetivo foi criar um sistema interativo que permitisse a um usuário realizar operações básicas do dia a dia bancário, aplicando regras de negócio e validações de fluxo.
+🚀 Funcionalidades Principais
+Cadastro de Usuários: Registro de clientes com CPF único (Chave Primária), nome, data de nascimento e endereço.
 
-### Operações Implementadas:
-- **Depósito:** Permite adicionar valores positivos ao saldo.
-- **Saque:** - Limite de 3 saques diários.
-  - Valor máximo de R$ 500,00 por transação.
-  - Verificação de saldo disponível.
-- **Extrato:** Lista todas as movimentações e exibe o saldo atual formatado.
+Abertura de Contas: Criação de contas correntes vinculadas a um usuário existente, gerando números de conta sequenciais.
 
-## 🛠️ Tecnologias e Conceitos Utilizados
-- **Linguagem:** Python 3.x
-- **Lógica de Programação:** Estruturas de repetição (`while`), condicionais (`if/elif/else`) e operadores lógicos.
-- **Formatação de Dados:** Uso de f-strings para exibição de valores monetários.
-- **UX/UI Terminal:** Implementação de feedbacks de sucesso/erro e pausas de tela para melhor leitura.
+Operações Financeiras:
 
-## 🚀 Como executar
-1. Certifique-se de ter o Python instalado.
-2. Clone o repositório ou baixe o arquivo `sistema_bancario.py`.
-3. Execute o comando:
-   ```bash
-   python sistema_bancario.py
+Depósito: Incremento de saldo com registro histórico no extrato.
 
-   ## 🆕 Novidades desta Versão
-- **Confirmação de Transação:** Implementada uma camada de segurança que pergunta ao usuário se ele deseja confirmar o depósito ou saque (`s/n`), evitando erros acidentais.
-- **Melhoria Visual:** Menu formatado com tabulações (`\t`) para melhor alinhamento no terminal.
-- **Correção de Fluxo:** Ajuste na lógica de exibição do extrato para garantir a leitura antes de retornar ao menu.
+Saque: Validação tripla (Saldo insuficiente, limite por operação e quantidade máxima de saques diários).
+
+Extrato: Relatório detalhado de todas as movimentações e saldo total formatado.
+
+Listagem de Contas: Consulta estruturada de todas as contas cadastradas (Agência, C/C e Titular).
+
+🛠️ Tecnologias e Conceitos Aplicados
+Linguagem: Python 3.x
+
+Modularização: Divisão de responsabilidades entre funções dedicadas (sacar, depositar, criar_usuario).
+
+Argumentos de Função: Implementação de parâmetros positional-only (/) e keyword-only (*) para maior segurança no fluxo de dados.
+
+Estrutura de Dados: Uso de Listas e Dicionários aninhados para simular um banco de dados em memória.
+
+UX/UI Terminal: Uso de textwrap.dedent e limpezas de tela para uma interface mais limpa e intuitiva.
+
+📋 Como Rodar o Projeto
+Certifique-se de ter o Python instalado em sua máquina.
+
+Clone este repositório ou baixe o arquivo .py.
+
+No terminal, execute o comando:
