@@ -1,38 +1,31 @@
-🏦 Sistema Bancário Otimizado com Python
-Este projeto é um simulador de operações bancárias desenvolvido como o segundo desafio do Bootcamp Engenharia de Dados com Python da  em parceria com a NTT DATA.
+# 🏦 Sistema Bancário com Programação Orientada a Objetos (POO)
 
-📝 Descrição do Projeto
-Este projeto consiste em um sistema bancário modularizado desenvolvido em Python, focado na aplicação de regras de negócio para gestão de contas e usuários. O sistema foi estruturado para simular o fluxo de um ERP financeiro, garantindo a integridade dos dados e a rastreabilidade das operações.
+Este projeto é a evolução do simulador de operações bancárias, desenvolvido para o desafio de modelagem de sistemas do Bootcamp Engenharia de Dados com Python da **DIO** em parceria com a **NTT DATA**.
 
-🚀 Funcionalidades Principais
-Cadastro de Usuários: Registro de clientes com CPF único (Chave Primária), nome, data de nascimento e endereço.
+## 📝 Descrição do Projeto
+O sistema foi refatorado para aplicar os pilares da **Programação Orientada a Objetos (POO)**. O objetivo foi transformar a lógica anterior (procedural) em uma arquitetura robusta, onde cada entidade (Cliente, Conta, Transação) é representada por uma classe, simulando a estrutura real de um sistema de gestão financeira.
 
-Abertura de Contas: Criação de contas correntes vinculadas a um usuário existente, gerando números de conta sequenciais.
+## 🚀 Funcionalidades e Arquitetura
+O projeto agora utiliza uma estrutura de classes baseada no diagrama UML oficial do desafio:
 
-Operações Financeiras:
+- **Modelagem de Clientes:** Classe base `Cliente` e especialização `PessoaFisica`.
+- **Gestão de Contas:** Classe `Conta` com especialização `ContaCorrente`, permitindo limites de saque e quantidade de operações.
+- **Histórico e Transações:** Implementação de uma classe `Historico` e uma interface `Transacao` (utilizando `ABC` - Abstract Base Classes) para padronizar `Saque` e `Deposito`.
+- **Operações Financeiras:** Validações de negócio encapsuladas dentro dos métodos das classes, garantindo maior segurança.
 
-Depósito: Incremento de saldo com registro histórico no extrato.
+## 🛠️ Tecnologias e Conceitos de POO Aplicados
+- **Linguagem:** Python 3.x
+- **Encapsulamento:** Uso de propriedades (`@property`) para proteger atributos como saldo e histórico.
+- **Herança:** Reuso de código entre classes pai e filho.
+- **Polimorfismo:** Implementação do método `registrar` que se comporta de forma diferente para Saques e Depósitos.
+- **Abstração:** Uso de métodos abstratos para definir contratos obrigatórios.
 
-Saque: Validação tripla (Saldo insuficiente, limite por operação e quantidade máxima de saques diários).
+## 📁 Estrutura de Arquivos
+- `sistema_bancario_poo.py`: Versão atualizada com toda a lógica de Objetos.
+- `sistema_bancario.py`: Versão legível (procedural) para histórico de evolução.
 
-Extrato: Relatório detalhado de todas as movimentações e saldo total formatado.
-
-Listagem de Contas: Consulta estruturada de todas as contas cadastradas (Agência, C/C e Titular).
-
-🛠️ Tecnologias e Conceitos Aplicados
-Linguagem: Python 3.x
-
-Modularização: Divisão de responsabilidades entre funções dedicadas (sacar, depositar, criar_usuario).
-
-Argumentos de Função: Implementação de parâmetros positional-only (/) e keyword-only (*) para maior segurança no fluxo de dados.
-
-Estrutura de Dados: Uso de Listas e Dicionários aninhados para simular um banco de dados em memória.
-
-UX/UI Terminal: Uso de textwrap.dedent e limpezas de tela para uma interface mais limpa e intuitiva.
-
-📋 Como Rodar o Projeto
-Certifique-se de ter o Python instalado em sua máquina.
-
-Clone este repositório ou baixe o arquivo .py.
-
-No terminal, execute o comando:
+## 📋 Como Rodar o Projeto
+1. Certifique-se de ter o Python 3.x instalado.
+2. No terminal, execute:
+   ```bash
+   python sistema_bancario_poo.py
